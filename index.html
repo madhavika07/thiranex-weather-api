@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Weather Dashboard</h1>
+            <p>Real-Time Async API Integration</p>
+        </header>
+
+        <!-- Search Component -->
+        <form id="search-form" class="search-area">
+            <input type="text" id="city-input" placeholder="Enter city name (e.g., Hyderabad, London)..." required autocomplete="off">
+            <button type="submit" class="btn-search">Search</button>
+        </form>
+
+        <!-- Feedback & Loading Channels -->
+        <div id="status-message" class="status-message hidden"></div>
+
+        <!-- Dynamic Weather Card Metrics -->
+        <section id="weather-card" class="weather-card hidden">
+            <div class="location-meta">
+                <h2 id="display-city">City Name</h2>
+            </div>
+            
+            <div class="main-metric">
+                <span id="display-temp">--</span><span class="unit">°C</span>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <span class="label">Humidity</span>
+                    <span id="display-humidity" class="value">--%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="label">Wind Speed</span>
+                    <span id="display-wind" class="value">-- km/h</span>
+                </div>
+                <div class="metric-item">
+                    <span class="label">Condition</span>
+                    <span id="display-condition" class="value">--</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
